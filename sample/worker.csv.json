@@ -4,9 +4,15 @@
   "value": [350000, 350001, 500000],
   "work": ["engineer", "designer", "marketer"],
   "birth_day": "Faker::Date.birthday(18, 65)",
-  "partner_name": "Faker::Name.name",
-  "partner_type": ["special", "partner"],
-  "partner_birth_day": "Faker::Date.birthday(18, 65)",
   "company": "4geru.company",
-  "random": "rb [true, false].sample"
+  "random": "rb [true, false].sample",
+  "partner": {
+    "primary": {
+      "partner_name": ["Faker::Name.name", ""]
+    },
+    "dependent": {
+      "partner_type": ["special", "partner"],
+      "partner_birth_day": "Faker::Date.birthday(18, 65)"
+    }
+  }
 }
