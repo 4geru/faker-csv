@@ -35,6 +35,8 @@ module Faker
           elsif value =~ /Faker/
             row << eval(value)
           elsif value =~ /rb/
+            ruby_sentence = value.sub(/^rb /, '')
+            row << eval(ruby_sentence)
           else
             row << value
           end
