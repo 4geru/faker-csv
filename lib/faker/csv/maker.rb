@@ -7,7 +7,7 @@ module Faker
       end
 
       def make
-        print make_titles + make_content
+        make_titles + make_content
       end
 
       private
